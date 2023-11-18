@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-div">
+        <p>can you stop me when I reach at 5?
+        </p>
+        <p id="para"></p>
+        <br>
+        <button id="btn">Start</button>
+        <button id="btn2">Stop</button>
+    </div>
+
+
+    <script>
+        let stopNum = document.querySelector('#para');
+        let btnClick = document.querySelector('#btn');
+        let stopInterval = document.querySelector('#btn2');
+
+        let timeRef;
+        let num = 0;
+
+        let showMyNum = () => {
+            stopNum.innerHTML = "Loading..."
+            timeRef = setInterval(() => {
+                stopNum.innerHTML = `${num}`;
+                num++;
+            }, 10)
+        }
+
+        btnClick.addEventListener('click', showMyNum);
+
+        stopInterval.addEventListener('click', () => {
+            clearInterval(timeRef);
+        })
+    </script>
+    
+    <!-- Also Learn about clearTimeOut(); -->
+
+</body>
+</html>

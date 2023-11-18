@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-div">
+        <label for="">Your Name</label>
+        <input type="text" name="" id="personName">
+        <br>
+        <label for="">Choose for an Ice-cream Flavour
+            <select name="iceCreams" id="iceCreams" onchange="showResult()">
+                <option value="">Select One...</option>
+                <option value="chocolate">Choclate</option>
+                <option value="mango">Mango</option>
+                <option value="vanilla">Vanilla</option>
+            </select>
+        </label>
+        <br>
+        <div id="result"></div>
+    </div>
+
+
+
+    <script>
+
+        // Method-1:
+        // let showResult = () => {
+        //     let yourName = document.getElementById('personName').value;
+        //     let iceCream = document.getElementById('iceCreams').value;
+
+        //     console.log(`${yourName} and ${iceCream}`);
+
+        //     document.getElementById('result').innerHTML = `Mr. ${yourName} choose ${iceCream} Flavour.`
+        // }
+
+        
+
+        // Method-2: 
+        let iceCream = document.getElementById('iceCreams');
+        iceCream.addEventListener('change', () =>{
+            let yourName = document.getElementById('personName').value;
+            let iceCream = document.getElementById('iceCreams').value;
+
+            console.log(`${yourName} and ${iceCream}`);
+
+            document.getElementById('result').innerHTML = `Mr. ${yourName} choose ${iceCream} Flavour.`
+        })
+
+    </script>
+    
+</body>
+</html>

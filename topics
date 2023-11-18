@@ -1,0 +1,14 @@
+1. Array Destructuring
+2. Object Destructuring
+3. padStart(), padEnd()
+4. Rest and Spread Properties
+5. entries(), formEntries(), Array.{flat, flatMap}
+6. bigint
+7. "use strict";
+8. Bubbling and capturing
+9. callback function and higher order function
+10. Sync and Async JS
+11. Closure
+12. Event Loop
+13. Function Currying
+14. 

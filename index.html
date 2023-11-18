@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+
+        p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-div">
+        <div class="child-one">
+            <p>I am child one.</p>
+        </div>
+        <div class="child-two">
+            <p>I am child two.</p>
+        </div>
+        <div class="child-three">
+            <p>I am child three.</p>
+        </div>
+
+        <h1 id="heading">Hello World!</h1>
+        <button onclick="showHindi()">Show Hindi Version</button>
+    </div>
+
+
+    <script>
+        let showHindi = () => {
+            document.getElementById('heading').innerHTML = "Namaste Duniya!";
+        }
+    </script>
+    
+</body>
+</html>
